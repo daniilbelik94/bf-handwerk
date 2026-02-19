@@ -8,6 +8,7 @@ import Impressum from './pages/Impressum';
 import Datenschutz from './pages/Datenschutz';
 import NotFound from './pages/NotFound';
 import CookieBanner from './components/ui/CookieBanner';
+import WhatsAppButton from './components/ui/WhatsAppButton';
 
 function ScrollToAnchor() {
   const { pathname, hash } = useLocation();
@@ -73,6 +74,7 @@ export default function App() {
     <BrowserRouter>
       <ScrollToAnchor />
       <CookieBanner />
+      <WhatsAppButton />
       <IntersectionObserverSetup />
       <Navbar />
       <main>

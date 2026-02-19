@@ -115,3 +115,57 @@ export const testimonials = [
         rating: 5,
     },
 ];
+
+export const process = [
+    {
+        step: 1,
+        title: 'Anfrage',
+        description: 'Sie kontaktieren uns per Formular oder WhatsApp. Wir klären erste Details.',
+        icon: 'message',
+    },
+    {
+        step: 2,
+        title: 'Angebot',
+        description: 'Wir erstellen Ihnen ein transparentes Festpreis-Angebot. Keine versteckten Kosten.',
+        icon: 'quote',
+    },
+    {
+        step: 3,
+        title: 'Umsetzung',
+        description: 'Zum vereinbarten Termin führen wir die Arbeiten sauber und präzise aus.',
+        icon: 'calendar',
+    },
+    {
+        step: 4,
+        title: 'Abnahme',
+        description: 'Gemeinsame Begutachtung. Wir gehen erst, wenn Sie zufrieden sind.',
+        icon: 'check',
+    },
+];
+
+export const faq = [
+    {
+        question: 'Sind Sie auch am Wochenende verfügbar?',
+        answer: 'Ja, nach Absprache arbeiten wir auch samstags, um Ihre Projekte termingerecht fertigzustellen.',
+    },
+    {
+        question: 'Muss ich das Material selbst besorgen?',
+        answer: 'Das entscheiden Sie. Wir können das Material besorgen oder das von Ihnen gekaufte Material verarbeiten.',
+    },
+    {
+        question: 'Wie schnell bekomme ich einen Termin?',
+        answer: 'In der Regel können wir Ihnen innerhalb von 1-2 Wochen einen Termin anbieten.',
+    },
+    {
+        question: 'Arbeiten Sie zum Festpreis?',
+        answer: 'Ja, wir erstellen Ihnen vorab ein verbindliches Angebot ohne böse Überraschungen.',
+    },
+];
+
+export const brands = [
+    { name: 'OBI', id: 'obi' },
+    { name: 'Bauhaus', id: 'bauhaus' },
+    { name: 'IKEA', id: 'ikea' },
+    { name: 'Höffner', id: 'hoeffner' },
+    { name: 'Hornbach', id: 'hornbach' },
+];
