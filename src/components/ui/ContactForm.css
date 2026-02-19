@@ -39,6 +39,7 @@
 
 .contact-form__input,
 .contact-form__textarea {
+    width: 100%;
     padding: 0.8rem 1rem;
     border: 1.5px solid var(--color-border);
     border-radius: var(--radius-sm);
@@ -90,6 +91,6 @@
     }
 
     .contact-form {
-        padding: var(--space-xl);
+        padding: var(--space-lg);
     }
 }
