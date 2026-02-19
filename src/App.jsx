@@ -8,11 +8,26 @@ import Impressum from './pages/Impressum';
 import Datenschutz from './pages/Datenschutz';
 import NotFound from './pages/NotFound';
 
-function ScrollToTop() {
-  const { pathname } = useLocation();
+function ScrollToAnchor() {
+  const { pathname, hash } = useLocation();
+
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    // If there is a hash, scroll to the element
+    if (hash) {
+      // Small timeout to ensure DOM is ready after route change
+      setTimeout(() => {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      // If no hash, scroll to top
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
+
   return null;
 }
 
@@ -55,7 +70,7 @@ function IntersectionObserverSetup() {
 export default function App() {
   return (
     <BrowserRouter>
-      <ScrollToTop />
+      <ScrollToAnchor />
       <IntersectionObserverSetup />
       <Navbar />
       <main>

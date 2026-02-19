@@ -10,7 +10,7 @@ export default function NotFound() {
             alignItems: 'center',
             justifyContent: 'center',
             textAlign: 'center',
-            padding: 'var(--space-4xl) var(--space-lg)'
+            padding: '8rem var(--space-lg) var(--space-4xl)'
         }}>
             <h1 style={{
                 fontSize: 'clamp(3rem, 10vw, 6rem)',

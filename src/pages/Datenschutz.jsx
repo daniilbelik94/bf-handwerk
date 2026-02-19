@@ -7,7 +7,7 @@ export default function Datenschutz() {
     }, []);
 
     return (
-        <div className="container" style={{ paddingBottom: 'var(--space-4xl)', paddingTop: 'var(--space-2xl)' }}>
+        <div className="container" style={{ paddingBottom: 'var(--space-4xl)', paddingTop: '8rem' }}>
             <h1 style={{ marginBottom: 'var(--space-xl)' }}>Datenschutzerklärung</h1>
 
             <section style={{ marginBottom: 'var(--space-xl)' }}>
