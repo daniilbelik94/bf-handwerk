@@ -5,11 +5,32 @@ import Button from './Button';
 export default function ContactForm() {
     const [status, setStatus] = useState(null);
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
-        setStatus('success');
-        e.target.reset();
-        setTimeout(() => setStatus(null), 4000);
+        const form = e.target;
+        const data = new FormData(form);
+
+        try {
+            const response = await fetch('https://formspree.io/f/maqdbkzr', {
+                method: 'POST',
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                setStatus('success');
+                form.reset();
+                setTimeout(() => setStatus(null), 5000);
+            } else {
+                setStatus('error');
+                setTimeout(() => setStatus(null), 5000);
+            }
+        } catch (error) {
+            setStatus('error');
+            setTimeout(() => setStatus(null), 5000);
+        }
     }
 
     return (
@@ -85,7 +106,12 @@ export default function ContactForm() {
             </Button>
             {status === 'success' && (
                 <p className="contact-form__status contact-form__status--success">
-                    Vielen Dank! Ihre Nachricht wurde gesendet. Ich melde mich schnellstmöglich bei Ihnen.
+                    Vielen Dank! Ihre Nachricht wurde gesendet. Wir melden uns schnellstmöglich bei Ihnen.
+                </p>
+            )}
+            {status === 'error' && (
+                <p className="contact-form__status contact-form__status--error">
+                    Es gab ein Problem beim Senden. Bitte versuchen Sie es erneut oder rufen Sie uns direkt an.
                 </p>
             )}
         </form>
