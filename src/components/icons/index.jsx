@@ -151,6 +151,25 @@ export function CheckIcon({ size = 24, className = '' }) {
     );
 }
 
+export function MessageIcon({ size = 24, className = '' }) {
+    return (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+            <path d="M21 11.5C21.0031 12.8199 20.6951 14.1272 20.1039 15.3057C19.5128 16.4841 18.6573 17.4975 17.6158 18.2544C16.5744 19.0112 15.3804 19.4882 14.1425 19.6425C12.9046 19.7969 11.6619 19.6238 10.527 19.139L5 21L6.861 15.417C6.37623 14.2821 6.2031 13.0394 6.35745 11.8015C6.5118 10.5636 6.98877 9.36961 7.74564 8.32817C8.50252 7.28673 9.51586 6.43122 10.6943 5.84007C11.8728 5.24892 13.1801 4.94092 14.5 4.944C16.222 4.94939 17.8719 5.63583 19.0883 6.85352C20.3047 8.07121 20.9893 9.72224 20.993 11.444L21 11.5Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+    );
+}
+
+export function QuoteIcon({ size = 24, className = '' }) {
+    return (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+            <path d="M10 11H6C5.46957 11 4.96086 11.2107 4.58579 11.5858C4.21071 11.9609 4 12.4696 4 13V19C4 19.5304 4.21071 20.0391 4.58579 20.4142C4.96086 20.7893 5.46957 21 6 21H10V11Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M10 11V7C10 5.67392 9.47321 4.40215 8.53553 3.46447C7.59785 2.52678 6.32608 2 5 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M20 11H16C15.4696 11 14.9609 11.2107 14.5858 11.5858C14.2107 11.9609 14 12.4696 14 13V19C14 19.5304 14.2107 20.0391 14.5858 20.4142C14.9609 20.7893 15.4696 21 16 21H20V11Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M20 11V7C20 5.67392 19.4732 4.40215 18.5355 3.46447C17.5979 2.52678 16.3261 2 15 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+    );
+}
+
 const iconMap = {
     floor: FloorIcon,
     furniture: FurnitureIcon,
@@ -167,6 +186,8 @@ const iconMap = {
     arrowRight: ArrowRightIcon,
     calendar: CalendarIcon,
     check: CheckIcon,
+    message: MessageIcon,
+    quote: QuoteIcon,
 };
 
 export function Icon({ name, size, className }) {
