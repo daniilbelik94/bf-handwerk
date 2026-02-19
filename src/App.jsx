@@ -7,6 +7,7 @@ import Blog from './pages/Blog';
 import Impressum from './pages/Impressum';
 import Datenschutz from './pages/Datenschutz';
 import NotFound from './pages/NotFound';
+import CookieBanner from './components/ui/CookieBanner';
 
 function ScrollToAnchor() {
   const { pathname, hash } = useLocation();
@@ -71,6 +72,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToAnchor />
+      <CookieBanner />
       <IntersectionObserverSetup />
       <Navbar />
       <main>
