@@ -4,6 +4,9 @@ import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
+import Impressum from './pages/Impressum';
+import Datenschutz from './pages/Datenschutz';
+import NotFound from './pages/NotFound';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -59,6 +62,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/impressum" element={<Impressum />} />
+          <Route path="/datenschutz" element={<Datenschutz />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />

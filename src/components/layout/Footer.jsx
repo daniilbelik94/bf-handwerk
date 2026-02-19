@@ -61,8 +61,8 @@ export default function Footer() {
                         &copy; {year} {siteConfig.businessName}. Alle Rechte vorbehalten.
                     </p>
                     <div className="footer__legal">
-                        <a href="#" className="footer__legal-link">Impressum</a>
-                        <a href="#" className="footer__legal-link">Datenschutz</a>
+                        <Link to="/impressum" className="footer__legal-link">Impressum</Link>
+                        <Link to="/datenschutz" className="footer__legal-link">Datenschutz</Link>
                     </div>
                 </div>
             </div>

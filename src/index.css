@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
-
 /* ========== DESIGN TOKENS ========== */
 :root {
   /* Colors */
@@ -112,7 +110,8 @@ a {
   text-decoration: none;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -123,12 +122,18 @@ button {
   background: none;
 }
 
-input, textarea {
+input,
+textarea {
   font-family: inherit;
   font-size: inherit;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   line-height: var(--lh-tight);
   color: var(--color-primary);
@@ -164,6 +169,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -171,8 +177,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes scaleIn {
@@ -180,6 +191,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0;
     transform: scale(0.92);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -191,6 +203,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0;
     transform: translateX(-40px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -202,6 +215,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0;
     transform: translateX(40px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -209,8 +223,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes drawLine {
-  from { width: 0; }
-  to { width: 60px; }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 60px;
+  }
 }
 
 .animate-on-scroll {
@@ -224,10 +243,21 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(0);
 }
 
-.animate-on-scroll.delay-1 { transition-delay: 0.1s; }
-.animate-on-scroll.delay-2 { transition-delay: 0.2s; }
-.animate-on-scroll.delay-3 { transition-delay: 0.3s; }
-.animate-on-scroll.delay-4 { transition-delay: 0.4s; }
+.animate-on-scroll.delay-1 {
+  transition-delay: 0.1s;
+}
+
+.animate-on-scroll.delay-2 {
+  transition-delay: 0.2s;
+}
+
+.animate-on-scroll.delay-3 {
+  transition-delay: 0.3s;
+}
+
+.animate-on-scroll.delay-4 {
+  transition-delay: 0.4s;
+}
 
 /* ========== SELECTION ========== */
 ::selection {
@@ -239,13 +269,16 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--color-bg-alt);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--color-accent);
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-accent-dark);
 }
