@@ -1,0 +1,101 @@
+.contact {
+    padding: var(--space-section) 0;
+    background: var(--color-bg);
+}
+
+.contact__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--space-3xl);
+    align-items: start;
+}
+
+.contact__info {
+    padding-top: var(--space-md);
+}
+
+.contact__info-text {
+    color: var(--color-text-light);
+    line-height: var(--lh-relaxed);
+    margin-bottom: var(--space-2xl);
+    font-size: var(--fs-body-lg);
+}
+
+.contact__details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.contact__detail {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+}
+
+.contact__detail-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(200, 149, 108, 0.1), rgba(200, 149, 108, 0.05));
+    border-radius: var(--radius-md);
+    color: var(--color-accent);
+    flex-shrink: 0;
+}
+
+.contact__detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.contact__detail-label {
+    font-size: var(--fs-small);
+    color: var(--color-text-muted);
+    font-weight: var(--fw-medium);
+}
+
+.contact__detail-value {
+    font-weight: var(--fw-semibold);
+    color: var(--color-primary);
+}
+
+.contact__detail-value a {
+    color: var(--color-primary);
+    transition: color var(--transition-fast);
+}
+
+.contact__detail-value a:hover {
+    color: var(--color-accent);
+}
+
+.contact__map-hint {
+    margin-top: var(--space-2xl);
+    padding: var(--space-lg);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border-light);
+}
+
+.contact__map-title {
+    font-family: var(--font-heading);
+    font-weight: var(--fw-semibold);
+    font-size: var(--fs-body);
+    color: var(--color-primary);
+    margin-bottom: var(--space-xs);
+}
+
+.contact__map-text {
+    font-size: var(--fs-small);
+    color: var(--color-text-light);
+    line-height: var(--lh-relaxed);
+}
+
+@media (max-width: 768px) {
+    .contact__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+}

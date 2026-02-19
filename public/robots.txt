@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bf-handwerk.de/sitemap.xml

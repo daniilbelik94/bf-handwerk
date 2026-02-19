@@ -1,0 +1,95 @@
+.contact-form {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border-light);
+}
+
+.contact-form__title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+    color: var(--color-primary);
+    margin-bottom: var(--space-xl);
+}
+
+.contact-form__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.contact-form__group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.contact-form__group--full {
+    grid-column: 1 / -1;
+}
+
+.contact-form__label {
+    font-size: var(--fs-small);
+    font-weight: var(--fw-medium);
+    color: var(--color-primary);
+}
+
+.contact-form__input,
+.contact-form__textarea {
+    padding: 0.8rem 1rem;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: var(--fs-body);
+    color: var(--color-text);
+    background: var(--color-bg);
+    transition: all var(--transition-fast);
+    outline: none;
+}
+
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(200, 149, 108, 0.15);
+    background: var(--color-white);
+}
+
+.contact-form__textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.contact-form__submit {
+    margin-top: var(--space-md);
+    width: 100%;
+}
+
+.contact-form__status {
+    margin-top: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-sm);
+    font-size: var(--fs-small);
+    text-align: center;
+}
+
+.contact-form__status--success {
+    background: rgba(74, 158, 110, 0.1);
+    color: var(--color-success);
+}
+
+.contact-form__status--error {
+    background: rgba(192, 57, 43, 0.1);
+    color: var(--color-error);
+}
+
+@media (max-width: 480px) {
+    .contact-form__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: var(--space-xl);
+    }
+}
